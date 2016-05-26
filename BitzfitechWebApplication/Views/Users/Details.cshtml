@@ -1,0 +1,79 @@
+﻿@model BitzfitechWebApplication.Models.UsersDB
+
+@{
+    ViewBag.Title = "User Profile";
+}
+
+<h2>@ViewBag.Title</h2>
+<hr />
+
+<fieldset>
+    <legend>UsersDB</legend>
+    <div class="content-wrapper">
+        <div class="float-left inline clear-fix" id="viewLeftSection">
+            <h2 class="pad-bottom">@Html.DisplayFor(model => model.Name)</h2>
+            <div class="kv-pair clear-fix">
+                <div class="float-left inline">
+                    <label class="kv-key">@Html.DisplayNameFor(model => model.Email)</label>
+                </div>
+                <div class="float-right inline">
+                    @{ var email = @Html.DisplayFor(model => model.Email); }
+                    <p class="kv-val"><a href="mailto:@email">@email</a></p>
+                </div>
+            </div>
+            <div class="kv-pair clear-fix">
+                <div class="float-left inline">
+                    <label class="kv-key">Date of Birth</label>
+                </div>
+                <div class="float-right inline">
+                    <p class="kv-val">@String.Format("{0:dd/MM/yyyy}", Model.DateOfBirth)</p>
+                </div>
+            </div>
+            <div class="kv-pair clear-fix">
+                <div class="float-left inline">
+                    <label class="kv-key">Favourite Netflix Show</label>
+                </div>
+                <div class="float-right inline">
+                    <p class="kv-val">@Html.DisplayFor(model => model.FavNetflix)</p>
+                </div>
+            </div>
+            <div class="kv-pair clear-fix">
+                <div class="float-left inline">
+                    <label class="kv-key">Number of Cats</label>
+                </div>
+                <div class="float-right inline">
+                    <p class="kv-val">@Html.DisplayFor(model => model.NumCats)</p>
+                </div>
+            </div>
+            <div class="kv-pair clear-fix">
+                <div class="float-left inline">
+                    <label class="kv-key">Share Data to 3rd Parties</label>
+                </div>
+                <div class="float-right inline">
+                    <p class="kv-val">@Html.DisplayFor(model => model.DataShare)</p>
+                </div>
+            </div>
+        </div>
+        <div class="float-right inline clear-fix">
+            <div class="img-container pull-down-2x">
+                <img src="https://c1.staticflickr.com/5/4108/4991086761_aaaae5a66a.jpg" alt="Profile Picture" width="200" height="200" />
+            </div>
+            <h2><i>@Html.DisplayFor(model => model.TwitterHandle)</i></h2>
+        </div>
+    </div>
+</fieldset>
+<div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+</div>
+<div class="content-wrapper">
+    <h2>Tweets</h2>
+    <hr />
+    <div class="float-left">
+        @foreach(var tweet in ViewBag.Tweets) {
+           <h4>@Html.Raw(tweet)</h4>
+        }
+    </div>
+</div>

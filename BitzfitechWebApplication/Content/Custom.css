@@ -1,0 +1,116 @@
+﻿.jumbotron {
+    background-color: #98FDDB;
+}
+
+.zero-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.half-pad-bottom {
+    padding-bottom: .5em;
+}
+
+.pad-bottom {
+    padding-bottom: 1em;
+}
+
+.kv-val,
+.half-pad-top {
+    padding-top: .5em;
+}
+
+.pad-top {
+    padding-top: 1em;
+}
+
+.pull-down {
+    margin-top: 1em;
+}
+
+.pull-down-2x {
+    margin-top: 2em;
+}
+
+.button-line {
+    padding: .5em 0 1em 0;
+}
+
+.button-line > button {
+    display: inline;
+    background-color: #333;
+    color: #FFF;
+}
+
+.button-line > button:hover {
+    background-color: #000;
+}
+
+a.no-decor:link,
+a.no-decor:active,
+a.no-decor:visited,
+a.no-decor:hover,
+a.no-decor::before,
+a.no-decor::after {
+    text-decoration: none !important;
+    padding: 0 !important;
+}
+
+article.text-120 p {
+    font-size: 1.2em;
+}
+
+.inline {
+    display: inline;
+}
+
+.img-container {
+    border: 4px solid #98FDDB;
+    box-shadow: 6px 6px 8px #CCC;
+}
+
+h2 > i {
+    color: #666;
+}
+
+.kv-pair {
+    width: 100%;
+    height: auto;
+    margin-bottom: .5em;
+}
+
+.kv-key {
+    text-align: left;
+}
+
+.kv-val {
+    text-align: center;
+    margin: 0;
+}
+
+a.kv-val {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1em;
+}
+
+#viewLeftSection {
+    width: 60%;
+}
+
+#viewLeftSection div.float-left,
+#viewLeftSection div.float-right {
+    width: 50%;
+}
+
+select {
+    width: 310px;
+    height: 30px;
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 5px 0 6px 0;
+}
+
+table.scatter-x th,
+table.scatter-x td {
+    padding: 0 .25em 0 .25em;
+}

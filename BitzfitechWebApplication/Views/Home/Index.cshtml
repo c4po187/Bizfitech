@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Message</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+<h2>The Purpose</h2>
+<div class="content-wrapper">
+    <article class="text-120">
+        <p>The Bizfitech User Manager provides a mechanism for displaying and organizing users within our database system.</p>
+        <div class="content-wrapper">
+            <fieldset>
+                <ol class="round">
+                    <li class="one">
+                        <label>View user information</label>
+                    </li>
+                    <li class="two">
+                        <label>Edit user information</label>
+                    </li>
+                    <li class="three">
+                        <label>Add new users to the database</label>
+                    </li>
+                    <li class="four">
+                        <label>Remove existing users from the database</label>
+                    </li>
+                </ol>
+            </fieldset>
+        </div>
+    </article>
+</div>
+@section jumbotron {
+    <section class="jumbotron">
+        <div class="content-wrapper">
+            <h3 class="half-pad-top">What would you like to do?</h3>
+            <div class="button-line">
+                <button title="Well, that would be this page"onclick="location.href='@Url.Action("Index", "Home")';return false;">Home</button>
+                <button title="Show all Users in the database" onclick="location.href='@Url.Action("Index", "Users")';return false;">View Users</button>
+            </div>
+        </div>
+    </section>    
+}
